@@ -1,0 +1,24 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+:root{
+  --color-1: #1B262C;
+  --text-color: #FFFFFF;
+  --accent-color: #F1EEDC;
+  --body-color: #001D20;
+  --button-color: #00ADB5;
+  
+  --button-hover-color: #00868D;
+  --blank-button-hover: #263841;
+}
+
+
+main {
+  height: 1000px;
+  background-color: var(--body-color)
+}

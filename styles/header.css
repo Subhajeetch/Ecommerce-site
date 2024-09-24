@@ -1,0 +1,110 @@
+header {
+  height: 68px;
+  width: 100%;
+  background-color: var(--color-1);
+  
+  display: flex;
+  align-items: center;
+}
+
+.logo_div {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 58px;
+}
+
+.search_bar {
+  position: relative;
+  padding-right: 40px;
+  
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.input_search_cont {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input_search {
+  height: 40px;
+  outline: none;
+  border: none;
+  flex: 1;
+  padding: 0 8px 0 8px;
+  border-radius: 4px 0 0 4px;
+}
+
+.search_btn {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 0;
+  border: none;
+  
+  background-color: var(--button-color);
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search_btn:hover {
+  background-color: var(--button-hover-color)
+}
+
+.search_icon {
+  height: 30px;
+}
+
+
+.buttons {
+  display: flex;
+  margin-right: 10px;
+}
+
+.orders, .cart {
+  
+  border-radius: 4px;
+  padding: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.orders:hover, .cart:hover {
+  background-color: var(--blank-button-hover);
+}
+
+
+.orders_icon, .cart_icon {
+  height: 40px;
+}
+
+
+
+.cart {
+  position: relative;
+}
+
+.cart_item_count_container {
+  height: 18px;
+  width: 18px;
+  background-color: var(--button-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+.cart_item_count {
+  font-size: 14px;
+}

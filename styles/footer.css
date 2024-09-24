@@ -1,0 +1,13 @@
+footer {
+  height: 74px;
+  background-color: var(--color-1);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.band_text {
+  color: var(--text-color);
+  font-size: 14px;
+}
