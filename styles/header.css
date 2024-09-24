@@ -1,7 +1,7 @@
 header {
   height: 68px;
   width: 100%;
-  background-color: var(--color-1);
+  background-color: var(--nav-color);
   
   display: flex;
   align-items: center;
@@ -107,4 +107,5 @@ header {
 
 .cart_item_count {
   font-size: 14px;
+  font-weight: bold;
 }
