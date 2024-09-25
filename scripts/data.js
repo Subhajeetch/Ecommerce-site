@@ -29,4 +29,4 @@ export const products = [
     priceCents: '2499',
     image: 'images/products/ijatn_512.webp'
   }
-  ];
+];
