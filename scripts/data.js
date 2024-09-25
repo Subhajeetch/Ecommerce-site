@@ -18,12 +18,6 @@ export const products = [
     image: 'images/products/gojo_pink_tshirt.jpg'
   },
   {
-    id: 'X0O9UZOEWOIMN7BOVBMF',
-    name: 'Gojo Couple T Shirts Black + White',
-    priceCents: '2999',
-    image: 'images/products/gojo_couple_t_shirts.webp'
-  },
-  {
     id: 'HI2H9V7VLIV2EQ2VEUNI',
     name: 'Cool Anime boy T Shirt Black',
     priceCents: '2499',

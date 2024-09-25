@@ -33,6 +33,7 @@ header {
 
 .input_search {
   height: 40px;
+  width: 80px;
   outline: none;
   border: none;
   flex: 1;
@@ -106,6 +107,6 @@ header {
 }
 
 .cart_item_count {
-  font-size: 14px;
+  font-size: 11px;
   font-weight: bold;
 }
