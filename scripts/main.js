@@ -33,7 +33,7 @@ function showCartQuantity() {
     
     document.querySelector('.cart_item_count')
     .innerHTML = cartQuantity;
-};
+}; //updates the cart quantity on the header
 
 
 document.querySelectorAll('.add_cart_btn')
@@ -41,7 +41,7 @@ document.querySelectorAll('.add_cart_btn')
   button.addEventListener('click', () => {
     const productId =  button.dataset.productId;
     
-    updateCart(productId);
+    updateCart(productId); //from cart.js
     showCartQuantity();
   });
 });
