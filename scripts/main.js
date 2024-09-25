@@ -1,3 +1,6 @@
+import {cart} from './cart.js';
+import {products} from './data.js';
+
 const productsContainer = document.querySelector('.products_container');
 
 

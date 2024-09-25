@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     id: '4Y1386A8EMS39SYBA05P',
     name: 'Jujutsu Kaisen Black T Shirt Itadori & Sukuna',
