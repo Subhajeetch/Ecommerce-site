@@ -15,7 +15,7 @@ const headerData = `
     <div class="cart">
       <img src="images/logos_and_icons/cart_icon.png" alt="cart" class="cart_icon">
       <div class="cart_item_count_container">
-        <p class="cart_item_count">2</p>
+        <p class="cart_item_count">0</p>
       </div>
     </div>
   </div>
