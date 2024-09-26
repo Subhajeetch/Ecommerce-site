@@ -33,14 +33,18 @@ main {
 
 .products_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 220px);
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   gap: 16px;
 }
 
+@media (min-width: 900px) {
+  .products_container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .product {
-  height: 350px;
-  width: 220px;
   padding: 4px;
   display: flex;
   flex-direction: column;
