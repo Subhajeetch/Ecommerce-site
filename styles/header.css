@@ -8,12 +8,13 @@ header {
 }
 
 .logo_div {
-  margin-left: 10px;
+  margin: 0 10px 0 10px;
+  width: 20%;
   cursor: pointer;
 }
 
 .logo {
-  height: 58px;
+  width: 100%;
 }
 
 .search_bar {
@@ -67,14 +68,14 @@ header {
 
 .buttons {
   display: flex;
-  margin-right: 10px;
+  margin: 0 10px 0 10px;
+  width: 104px;
 }
 
 .orders, .cart {
-  
   border-radius: 4px;
   padding: 4px;
-  margin-left: 10px;
+  margin-left: 4px;
   cursor: pointer;
 }
 
@@ -84,7 +85,7 @@ header {
 
 
 .orders_icon, .cart_icon {
-  height: 40px;
+  width: 100%;
 }
 
 
