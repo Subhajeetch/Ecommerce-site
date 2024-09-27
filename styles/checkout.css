@@ -119,7 +119,7 @@ main {
   border: 3px solid var(--highlighted-div);
   border-radius: 10px;
   width: 380px;
-  height: 244px;
+  height: 264px;
 }
 
 @media (max-width: 600px) {
