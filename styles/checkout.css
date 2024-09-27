@@ -1,3 +1,16 @@
+main {
+  padding: 6px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.cart_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .cart_product {
   display: flex;
   flex-direction: column;
@@ -63,4 +76,150 @@
 .product_name {
   font-size: 18px;
   font-weight: bold;
+}
+
+
+.delivery_options_container {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.delivery_option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.delivery_options_details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.delevery_option_title {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.delevery_option_sub_title {
+  color: #A6A6A6;
+  font-size: 11px;
+}
+
+
+
+.summury_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border: 3px solid var(--highlighted-div);
+  border-radius: 10px;
+  width: 380px;
+  height: 244px;
+}
+
+@media (max-width: 600px) {
+  main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  .summury_container {
+    width: 90%;
+  }
+}
+
+.summary_tilte {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.summary_details_container {
+  display: flex;
+}
+
+.items_and_shipping_subtitles {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 10px;
+}
+
+.items_and_shipping_prices {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 10px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 3px solid var(--highlighted-div);
+}
+
+.summury_subtitles {
+  color: #BFBFBF;
+  font-size: 16px;
+}
+
+.summary_prices {
+  color: #BFBFBF;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.to_make_border {
+  border-bottom: 3px solid var(--highlighted-div);
+}
+
+.summary_total_and_checkout_btn_container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.total_price_container {
+  display: flex;
+}
+
+.order_total {
+  flex: 1;
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--button-color);
+}
+
+.total_price {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--button-color);
+}
+
+.checkout_btn_container {
+  display: flex;
+  justify-content: center;
+}
+
+.checkout_btn {
+  width: 70%;
+  font-size: 16px;
+  font-weight: bolder;
+  padding: 12px 0 12px 0;
+  border-radius: 10px;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--button-color);
+  cursor: pointer;
+}
+
+.checkout_btn:hover {
+  background-color: var(--button-hover-color);
 }

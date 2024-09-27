@@ -16,28 +16,41 @@
   <main>
     
     <div class="cart_container">
-      <div class="cart_products_container">
-        <div class="cart_product">
-          <div class="product_image_price_quantity_dTime">
-            <div class="product_image_container">
-              <img src="images/products/jujutsu_kaisan_t_shirt.jpg" alt="T shirt" class="product_image">
+    </div>
+    
+    <div class="summury_container">
+      <p class="summary_tilte">Order Summary</p>
+        <div class="summary">
+          <div class="summary_details_container">
+            <div class="items_and_shipping_subtitles">
+              <p class="summury_subtitles">Items (3):</p>
+              <p class="summury_subtitles">Shipping & handling:</p>
             </div>
-            <div class="product_other_details">
-              <p class="product_name">Jujutsu Kaisan T Shirt</p>
-              
-              <p class="product_detaiuls">Price: <span class="main_details">$29.99</span></p>
-              
-              <p class="product_detaiuls">Quantity: <span class="main_details">1</span></p>
-              
-              <p class="Delivery_time"> Ariving on <span class="js_delevery_time">Octover 9, 2024</span></p>
-              
+            <div class="items_and_shipping_prices to_make_border">
+              <p class="summary_prices">$67.45</p>
+              <p class="summary_prices">$4.99</p>
             </div>
           </div>
-        </div>
+          <div class="summary_details_container">
+            <div class="items_and_shipping_subtitles">
+              <p class="summury_subtitles">Total before tax:</p>
+              <p class="summury_subtitles">Estimated tax (10%):</p>
+            </div>
+            <div class="items_and_shipping_prices">
+              <p class="summary_prices">$72.45</p>
+              <p class="summary_prices">$4.99</p>
+            </div>
+          </div>
       </div>
       
-      <div class="summury_container">
-        
+      <div class="summary_total_and_checkout_btn_container">
+        <div class="total_price_container">
+           <p class="order_total">Order total:</p>
+           <p class="total_price">$79.23</p>
+        </div>
+        <div class="checkout_btn_container">
+          <button class="checkout_btn">Place your order</button>
+        </div>
       </div>
     </div>
     
@@ -47,6 +60,6 @@
   </footer>
 <script src="scripts/header.js"></script>
 <script src="scripts/footer.js"></script>
-<script src="scripts/checkout.js"></script>
+<script type="module" src="scripts/checkout.js"></script>
 </body>
 </html>
