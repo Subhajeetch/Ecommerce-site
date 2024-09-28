@@ -1,3 +1,10 @@
+import {cart} from './cart.js';
+
+let cartQuantity = 0;
+  cart.forEach((cartItem) => {
+     cartQuantity += cartItem.quantity;
+  });
+    
 const headerData = `
   <div class="logo_div">
     <img src="images/logos_and_icons/logo.png" alt="Mantomart" class="logo"/>
@@ -15,7 +22,7 @@ const headerData = `
     <div class="cart">
       <img src="images/logos_and_icons/cart_icon.png" alt="cart" class="cart_icon">
       <div class="cart_item_count_container">
-        <p class="cart_item_count">0</p>
+        <p class="cart_item_count">${cartQuantity}</p>
       </div>
     </div>
   </div>
@@ -23,3 +30,14 @@ const headerData = `
 
 const header = document.querySelector('.header');
 header.innerHTML = headerData;
+
+
+const cartButton = document.querySelector('.cart');
+cartButton.addEventListener('click', () => {
+  window.location.href = 'checkout.html';
+});
+
+const logoButton = document.querySelector('.logo_div');
+logoButton.addEventListener('click', () => {
+  window.location.href = 'index.html';
+});

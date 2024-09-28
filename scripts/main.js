@@ -30,7 +30,7 @@ function showCartQuantity() {
     cart.forEach((cartItem) => {
       cartQuantity += cartItem.quantity;
     });
-    
+  
     document.querySelector('.cart_item_count')
     .innerHTML = cartQuantity;
 }; //updates the cart quantity on the header

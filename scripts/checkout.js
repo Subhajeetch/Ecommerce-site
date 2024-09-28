@@ -1,4 +1,4 @@
-import {cart} from './cart.js';
+import {cart, removeFromCart} from './cart.js';
 import {products} from './data.js';
 
 
@@ -15,7 +15,7 @@ cart.forEach((cartItems) => {
   
   cartHTML +=
   `
-      <div class="cart_products_container">
+      <div class="cart_products_container js-cart-product-container-${matchingItem.id}">
         <div class="cart_product">
           <div class="product_image_price_quantity_dTime">
             <div class="product_image_container">
@@ -66,8 +66,38 @@ cart.forEach((cartItems) => {
             </div>
           </div>
         </div>
+        
+        <div class="btns_container">
+          <button class="delete_and_edit_btn js-delete-btn" data-product-id="${matchingItem.id}"><img class="essential_icons" src="images/logos_and_icons/delete.png" alt="Delete"></button>
+          <button class="delete_and_edit_btn"><img class="essential_icons" src="images/logos_and_icons/edit.png" alt="Edit" /></button>
+        </div>
+        
       </div>
   `
 });
 
 document.querySelector('.cart_container').innerHTML = cartHTML;
+
+function showCartQuantity() {
+  let cartQuantity = 0;
+    cart.forEach((cartItem) => {
+      cartQuantity += cartItem.quantity;
+    });
+  
+    document.querySelector('.cart_item_count')
+    .innerHTML = cartQuantity;
+}; //updates the cart quantity on the header
+
+
+document.querySelectorAll('.js-delete-btn')
+  .forEach((button) => {
+    button.addEventListener('click', () => {
+    const productId = button.dataset.productId;
+      removeFromCart(productId);
+      showCartQuantity();
+      
+      
+      const productContainer = document.querySelector(`.js-cart-product-container-${productId}`);
+      productContainer.remove();
+    });
+  });

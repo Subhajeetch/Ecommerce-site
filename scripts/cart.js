@@ -1,17 +1,21 @@
-export const cart = [
-  {
-    productId: '4Y1386A8EMS39SYBA05P',
-    quantity: 1
-  },
-  {
-    productId: 'OJU1I737E0YVRXKPT09R',
-    quantity: 2
-  },
-  {
-    productId: 'NFO4CB0QZWPQ8KZD8B4C',
-    quantity: 7
-  }
-  ];
+export let cart = JSON.parse(localStorage.getItem('cart'));
+
+if (!cart) {
+  cart = [
+        {
+          productId: '4Y1386A8EMS39SYBA05P',
+          quantity: 1
+        },
+        {
+          productId: 'OJU1I737E0YVRXKPT09R',
+          quantity: 2
+        }
+        ];
+};
+  
+  function saveToStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  };
 
 export function updateCart(productId) {
   let matchingItem;
@@ -27,6 +31,22 @@ export function updateCart(productId) {
       cart.push({
       productId: productId,
       quantity: 1
-    });
+      });
     };
+    
+    saveToStorage();
+};
+
+
+export function removeFromCart (productId) {
+  const newCart = [];
+  
+  cart.forEach((cartItem) => {
+    if (cartItem.productId !== productId) {
+      newCart.push(cartItem);
+    };
+  });
+  
+  cart = newCart;
+  saveToStorage();
 };
