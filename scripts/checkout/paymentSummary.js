@@ -61,6 +61,19 @@ export function renderPaymentSummary() {
   
   `;
   
-  document.querySelector('.js_summury_container')
-   .innerHTML = paymentSummaryHTML;
+  const summaryContainerHTML = document.querySelector('.js_summury_container');
+  
+  if (totalCartQuantity === 0) {
+    summaryContainerHTML.innerHTML = 
+   `
+    <p class="cart_empty_para">Your cart is empty!</p>
+    <div class="broke_img_container">
+      <img src="images/others/broke_af.gif" alt="no_money" class="broke_img">
+    </div>
+    <button class="buy_something_btn" onclick="window.location.href = 'index.html';">Let's Buy Something</button>
+   
+   `
+  } else {
+    summaryContainerHTML.innerHTML = paymentSummaryHTML;
+  };
 };

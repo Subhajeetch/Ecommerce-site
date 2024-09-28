@@ -126,6 +126,7 @@ main {
   border-radius: 10px;
   width: 380px;
   height: 264px;
+  position: relative;
 }
 
 @media (max-width: 600px) {
@@ -255,5 +256,49 @@ main {
 }
 
 .delete_and_edit_btn:hover {
+  background-color: var(--button-hover-color);
+}
+
+
+
+
+/* cart empty styles */
+
+.cart_empty_para {
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.broke_img_container {
+  display: flex;
+  justify-content: center;
+}
+
+.broke_img {
+  border-radius: 8px;
+  border: 3px solid transparent;
+  outline: 2px solid var(--button-color);
+  height: 140px;
+}
+
+.buy_something_btn {
+  align-self: center;
+  width: 70%;
+  font-size: 16px;
+  font-weight: bolder;
+  padding: 12px 0 12px 0;
+  border-radius: 10px;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--button-color);
+  cursor: pointer;
+  
+  position: absolute;
+  bottom: 10px;
+}
+
+.buy_something_btn:hover {
   background-color: var(--button-hover-color);
 }

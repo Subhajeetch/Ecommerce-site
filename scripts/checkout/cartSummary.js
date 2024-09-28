@@ -5,12 +5,14 @@ import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import {renderPaymentSummary} from './paymentSummary.js';
 
 
+
 export function renderCart() {
 
 
       let cartHTML = '';
       cart.forEach((cartItems) => {
         const productId = cartItems.productId;
+        
         
         const matchingItem = getProduct(productId);
         
@@ -25,7 +27,6 @@ export function renderCart() {
         const dateString = deliveryDate.format(
           'dddd, MMMM D'
         );
-        
         
         cartHTML +=
         `
@@ -118,7 +119,6 @@ export function renderCart() {
           const productId = button.dataset.productId;
             removeFromCart(productId);
             showCartQuantity();
-            
             
             
             const productContainer = document.querySelector(`.js-cart-product-container-${productId}`);
