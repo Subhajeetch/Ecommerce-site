@@ -133,6 +133,7 @@ export function renderCart() {
               const {productId, deliveryOptionId} = deliveryOptionButton.dataset;
               updateDeliveryOption(productId, deliveryOptionId);
               renderCart();
+              renderPaymentSummary();
             });
           });
           
