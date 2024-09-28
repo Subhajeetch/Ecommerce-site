@@ -1,3 +1,16 @@
+export function getProduct(productId) {
+  let matchingItem;
+        
+        products.forEach((product) => {
+          if (product.id === productId) {
+            matchingItem = product;
+          };
+        });
+    
+    return matchingItem;
+};
+
+
 export const products = [
   {
     id: '4Y1386A8EMS39SYBA05P',
