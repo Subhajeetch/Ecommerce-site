@@ -4,11 +4,13 @@ if (!cart) {
   cart = [
         {
           productId: '4Y1386A8EMS39SYBA05P',
-          quantity: 1
+          quantity: 1,
+          deliveryOptionID: '1'
         },
         {
           productId: 'OJU1I737E0YVRXKPT09R',
-          quantity: 2
+          quantity: 2,
+          deliveryOptionID: '3'
         }
         ];
 };
@@ -30,7 +32,8 @@ export function updateCart(productId) {
     } else {
       cart.push({
       productId: productId,
-      quantity: 1
+      quantity: 1,
+      deliveryOptionID: '1'
       });
     };
     
