@@ -2,6 +2,7 @@ import {cart, removeFromCart, updateDeliveryOption} from '../cart.js';
 import {products, getProduct} from '../data.js';
 import {deliveryOptions, getDeliveryOption} from '../deliveryOptions.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+import {renderPaymentSummary} from './paymentSummary.js';
 
 
 export function renderCart() {
@@ -37,7 +38,7 @@ export function renderCart() {
                   <div class="product_other_details">
                     <p class="product_name">${matchingItem.name}</p>
                     
-                    <p class="product_detaiuls">Price: <span class="main_details">$${matchingItem.priceCents / 100}</span></p>
+                    <p class="product_detaiuls">Price: <span class="main_details">$${(Math.round(matchingItem.priceCents) / 100).toFixed(2)}</span></p>
                     
                     <p class="product_detaiuls">Quantity: <span class="main_details">${cartItems.quantity}</span></p>
                     
@@ -73,7 +74,7 @@ export function renderCart() {
               
               const priceString = deliveryOption.priceCents === 0
               ? 'FREE'
-              : `$${(deliveryOption.priceCents / 100).toFixed(2)} -`;
+              : `$${(Math.round(deliveryOption.priceCents) / 100).toFixed(2)} -`;
               
               const isChecked = deliveryOption.id === cartItems.deliveryOptionID;
               
@@ -119,8 +120,10 @@ export function renderCart() {
             showCartQuantity();
             
             
+            
             const productContainer = document.querySelector(`.js-cart-product-container-${productId}`);
             productContainer.remove();
+            renderPaymentSummary();
           });
         });
         

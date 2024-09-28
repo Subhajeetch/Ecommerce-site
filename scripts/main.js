@@ -11,7 +11,7 @@ products.forEach((product) => {
       <div class="product_img_and_price_container">
         <img src="${product.image}" alt="jujutsu_kaisan_t_shirt" class="product_img">
         <div class="price_container">
-          <p class="price">USD $${product.priceCents / 100}</p>
+          <p class="price">USD $${(Math.round(product.priceCents) / 100).toFixed(2)}</p>
         </div>
       </div>
       <div class="product_name_container">
